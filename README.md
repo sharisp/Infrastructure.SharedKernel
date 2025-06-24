@@ -6,7 +6,7 @@ A lightweight shared infrastructure kernel for .NET 8 projects, encapsulating re
 
 ## 📦 Installation
 
-Install via NuGet:
+Install via NuGet:Andrew.Infrastructure.SharedKernel 
 
 
 ## 📁 Features
