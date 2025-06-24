@@ -6,7 +6,7 @@ namespace Infrastructure.SharedKernel
 {
     public partial class BaseDbContext : Microsoft.EntityFrameworkCore.DbContext
     {
-        public BaseDbContext(DbContextOptions<BaseDbContext> options)
+        public BaseDbContext(DbContextOptions options)
             : base(options)
         {
         }
@@ -15,7 +15,9 @@ namespace Infrastructure.SharedKernel
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-            modelBuilder.ApplyConfigurationsFromAssembly(typeof(BaseDbContext).Assembly);
+           // modelBuilder.ApplyConfigurationsFromAssembly(typeof(BaseDbContext).Assembly);
+            modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
+
             foreach (var entityType in modelBuilder.Model.GetEntityTypes())
             {
                 if (typeof(BaseAuditableEntity).IsAssignableFrom(entityType.ClrType) &&
