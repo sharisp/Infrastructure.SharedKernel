@@ -32,6 +32,11 @@ namespace Infrastructure.SharedKernel
             }
 
         }
+        /// <summary>
+        /// global query filter IsDel
+        /// </summary>
+        /// <typeparam name="TEntity"></typeparam>
+        /// <param name="modelBuilder"></param>
         private static void ApplySoftDeleteFilter<TEntity>(ModelBuilder modelBuilder)
             where TEntity : BaseAuditableEntity
         {
