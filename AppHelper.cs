@@ -55,13 +55,13 @@ namespace Infrastructure.SharedKernel
             }
             catch
             {
-                return null;
+                return default;
             }
-            return null;
+            return default;
         }
 
-        //T可以传递对象，也可以传递List<string> string[]
-        public static T ReadAppSettingsSection<T>(params string[] sessions)
+      
+        public static T? ReadAppSettingsSection<T>(params string[] sessions)
         {
             try
             {
