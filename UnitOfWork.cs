@@ -73,7 +73,11 @@ namespace Infrastructure.SharedKernel
                 }
             }
         }
-
+        /// <summary>
+        /// publish domain events for entities that have them after saving changes to the database.
+        /// </summary>
+        /// <param name="context"></param>
+        /// <returns></returns>
         public async Task DispatchEvents(DbContext? context)
         {
             if (context == null) return;
