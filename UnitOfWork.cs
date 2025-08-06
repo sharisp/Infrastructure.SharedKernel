@@ -32,7 +32,10 @@ namespace Infrastructure.SharedKernel
             }
             return res;
         }
-
+        /// <summary>
+        /// update the entities with audit information like creator, updater, and timestamps.
+        /// </summary>
+        /// <param name="context"></param>
         public void UpdateEntities(DbContext? context)
         {
             if (context == null) return;
