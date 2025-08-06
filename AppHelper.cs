@@ -2,7 +2,9 @@
 
 namespace Infrastructure.SharedKernel
 {
-
+    /// <summary>
+    /// AppHelper,for reading appsettings.json or other configuration files.
+    /// </summary>
     public class AppHelper
     {
         private static IConfiguration _config;
