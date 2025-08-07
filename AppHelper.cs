@@ -31,7 +31,7 @@ namespace Infrastructure.SharedKernel
             }
         }
         /// <summary>
-        /// 读取指定节点的字符串
+        ///  get session configuration value from appsettings.json by sub sections.
         /// </summary>
         /// <param name="sessions"></param>
         /// <returns></returns>
