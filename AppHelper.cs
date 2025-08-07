@@ -50,6 +50,11 @@ namespace Infrastructure.SharedKernel
             }
             return "";
         }
+        /// <summary>
+        /// get session configuration value from appsettings.json by sub sections and return as a list of IConfigurationSection.
+        /// </summary>
+        /// <param name="sessions"></param>
+        /// <returns></returns>
         public static List<IConfigurationSection> ReadAppSettingsSection(params string[] sessions)
         {
             try
