@@ -13,7 +13,11 @@ namespace Infrastructure.SharedKernel
         {
             _config = configuration;
         }
-
+        /// <summary>
+        /// get session configuration value from appsettings.json
+        /// </summary>
+        /// <param name="sessions"></param>
+        /// <returns></returns>
         public static string ReadAppSetting(string sessions)
         {
             try
