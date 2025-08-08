@@ -71,7 +71,12 @@ namespace Infrastructure.SharedKernel
             return default;
         }
 
-      
+        /// <summary>
+        /// get session configuration value from appsettings.json by sub sections and return as a specific type.
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="sessions"></param>
+        /// <returns></returns>
         public static T? ReadAppSettingsSection<T>(params string[] sessions)
         {
             try
