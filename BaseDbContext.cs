@@ -11,7 +11,10 @@ namespace Infrastructure.SharedKernel
         {
         }
 
-       
+        /// <summary>
+        /// bind ApplySoftDeleteFilter
+        /// </summary>
+        /// <param name="modelBuilder"></param>
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
