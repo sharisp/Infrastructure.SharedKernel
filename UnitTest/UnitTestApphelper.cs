@@ -44,7 +44,15 @@ namespace UnitTest
             Assert.IsTrue(str.Length > 0);
             Assert.IsTrue(str == "*");
         }
+        [TestMethod]
+        public void TestReadSessionString()
+        {
 
+            var str = AppHelper.ReadAppSetting("Snowflake:WorkerId");
+            Assert.IsNotNull(str);
+            Assert.IsTrue(str.Length > 0);
+            Assert.IsTrue(str == "1");
+        }
 
     }
 }
