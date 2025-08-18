@@ -1,6 +1,7 @@
 using Domain.SharedKernel;
 using Domain.SharedKernel.BaseEntity;
 using Domain.SharedKernel.HelperFunctions;
+using Infrastructure.SharedKernel;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -8,7 +9,7 @@ using Microsoft.Extensions.DependencyInjection;
 namespace UnitTest
 {
     [TestClass]
-    public class UnitTest1
+    public class UnitTestApphelper
     {
         private ServiceProvider _serviceProvider;
 
@@ -17,7 +18,7 @@ namespace UnitTest
         public void Setup()
         {
             var services = new ServiceCollection();
-            services.AddDomainShardKernelCollection(new ConfigurationBuilder()
+            services.AddInfrastructureKernelCollection(new ConfigurationBuilder()
                 .AddJsonFile("appsettings.json")
                 .Build());
             _serviceProvider = services.BuildServiceProvider();
@@ -32,6 +33,16 @@ namespace UnitTest
             {
                 _serviceProvider.Dispose();
             }
+        }
+
+        [TestMethod]
+        public void TestReadString()
+        {
+
+            var str = AppHelper.ReadAppSetting("AllowedHosts");
+            Assert.IsNotNull(str);
+            Assert.IsTrue(str.Length > 0);
+            Assert.IsTrue(str == "*");
         }
 
 
