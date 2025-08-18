@@ -37,15 +37,6 @@
 
   <!-- You need to explicitly include the README.md file if you use <PackageReadmeFile>.
      Place this <ItemGroup> outside the <PropertyGroup>, but still within the <Project> tags. -->
-  <ItemGroup>
-    <None Include="README.md" Pack="true" PackagePath="\" />
-    <!-- 'Pack="true"' means include it in the NuGet package.
-       'PackagePath="\"' means put it at the root of the package. -->
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="README.md" Pack="true" PackagePath="\" />
-  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Andrew.Domain.SharedKernel" Version="1.1.1" />
