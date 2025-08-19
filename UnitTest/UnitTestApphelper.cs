@@ -69,5 +69,14 @@ namespace UnitTest
             Assert.IsNull(str);
 
         }
+
+        [TestMethod]
+        public void TestReadSession()
+        {
+
+            var configs = AppHelper.ReadAppSettingsSection("Logging");
+            Assert.IsNotNull(configs);
+         
+        }
     }
 }
