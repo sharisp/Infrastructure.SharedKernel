@@ -61,5 +61,13 @@ namespace UnitTest
             Assert.IsNull(str);
            
         }
+        [TestMethod]
+        public void TestNotExists2()
+        {
+
+            var str = AppHelper.ReadAppSetting("Snowflake1");
+            Assert.IsNull(str);
+
+        }
     }
 }
