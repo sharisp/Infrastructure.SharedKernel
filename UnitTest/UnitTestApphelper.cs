@@ -53,6 +53,13 @@ namespace UnitTest
             Assert.IsTrue(str.Length > 0);
             Assert.IsTrue(str == "1");
         }
+        [TestMethod]
+        public void TestNotExists()
+        {
 
+            var str = AppHelper.ReadAppSetting("Snowflake:WorkerId111");
+            Assert.IsNull(str);
+           
+        }
     }
 }
