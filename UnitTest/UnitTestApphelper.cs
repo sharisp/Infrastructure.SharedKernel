@@ -63,6 +63,14 @@ namespace UnitTest
             Assert.IsTrue(id==1);
         }
         [TestMethod]
+        public void TestReadSessionGenericNull()
+        {
+
+            int? id = AppHelper.ReadAppSettingsSection<int?>("Snowflake:WorkerId1");
+            Assert.IsNull(id);
+
+        }
+        [TestMethod]
         public void TestNotExists()
         {
 
